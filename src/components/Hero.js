@@ -1,24 +1,17 @@
 const Hero = () => {
 	return (
-		<section className='flex flex-col h-[80vh] justify-center items-center text-center'>
-			<div className='flex flex-col justify-center items-center text-center backdrop-blur-lg bg-white/5 w-[60%] rounded-lg p-8'>
-				<h1 className='text-6xl'>LIFEHOUSE ACADEMY</h1>
-				<p className='my-8 text-xl'>
-					Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat ad
-					magnam tempora autem. Ad, ullam! Corporis, eveniet? Iure porro sed
-					harum adipisci quod vero error laboriosam asperiores recusandae. Odio,
-					obcaecati!
-				</p>
-				<div className='flex justify-around items-center text-center w-full px-32'>
-					<button className='text-xl px-4 py-2 rounded-lg backdrop-blur-lg bg-blue-500'>
-						Courses
-					</button>
-					<button className='text-xl px-4 py-2 rounded-lg backdrop-blur-lg'>
-						Contact Us
-					</button>
+		<section className="hero min-h-screen bg-base-200">
+				<div className="hero-content text-center">
+					<div className="max-w-md">
+						<h1 className="text-5xl font-bold">Lifehouse Academy</h1>
+						<p className="py-6">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facere eligendi neque aspernatur ad aut, repellat mollitia quisquam? Explicabo, tenetur quo.</p>
+						<div className="flex justify-evenly items-center px-10">
+						<button className="btn btn-primary">Courses</button>
+						<button className="btn btn-outline">Contact Us</button>
+						</div>
+					</div>
 				</div>
-			</div>
-		</section>
+			</section>
 	);
 };
 

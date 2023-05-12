@@ -1,39 +1,49 @@
-import Image from 'next/image';
-import Link from 'next/link';
+import Image from "next/image";
+import Link from "next/link";
+import { Bars3Icon, ChevronDownIcon } from "@heroicons/react/24/solid";
 
 const Navbar = () => {
-	return (
-		<nav className='flex h-[15vh] justify-center items-center text-center bg-[#111] sticky top-0 left-0 right-0 z-10'>
-			<div className='w-[25%] flex justify-center items-center text-center'>
-				<Link href=''>
-					<Image
-						className='rounded-full bg-white'
-						src=''
-						alt=''
-						height={72}
-						width={72}
-					/>
-				</Link>
-			</div>
-			<div className='w-[75%] pl-32 flex justify-evenly items-center text-center'>
-				<Link
-					href=''
-					className='text-xl'>
-					TEAM
-				</Link>
-				<Link
-					href=''
-					className='text-xl'>
-					SCHOOLS
-				</Link>
-				<Link
-					href=''
-					className='text-xl'>
-					CONTACT US
-				</Link>
-			</div>
-		</nav>
-	);
+  return (
+    <nav className="navbar bg-base-100 z-10 px-16">
+      <div className="flex-1">
+        <Link href="/" className="hover:opacity-50">
+          <Image
+            className="rounded-full bg-white"
+            src=""
+            alt=""
+            height={40}
+            width={40}
+          />
+        </Link>
+      </div>
+      <div className="flex">
+        <ul className="menu menu-horizontal px-1 z-10">
+          <li>
+            <Link href="/#team" className="btn btn-ghost mx-4">
+              Our Team
+            </Link>
+          </li>
+          <li tabIndex={0}>
+            <p>Schools
+			<ChevronDownIcon height={20} width={20} /></p>
+            <ul className="p-2 bg-base-100">
+              <li>
+                <Link href="/school-of-music">School of Music</Link>
+              </li>
+              <li>
+                <Link href="/school-of-media">School of Media</Link>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <Link href="/#contact" className="btn btn-ghost mx-4">
+              Contact Us
+            </Link>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  );
 };
 
 export default Navbar;
