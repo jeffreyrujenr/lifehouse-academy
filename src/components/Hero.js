@@ -9,9 +9,8 @@ const Hero = () => {
 				<div className='max-w-md'>
 					<h1 className='text-4xl font-bold'>LIFEHOUSE ACADEMY</h1>
 					<p className='py-6'>
-						Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facere
-						eligendi neque aspernatur ad aut, repellat mollitia quisquam?
-						Explicabo, tenetur quo.
+						Lifehouse Academy exists to equip people with technical skills to
+						face the challenges of the world and make an impact in society.
 					</p>
 					<div className='flex justify-evenly items-center px-10'>
 						<Link

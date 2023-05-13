@@ -8,24 +8,24 @@ import {
 
 const Navbar = () => {
 	return (
-		<nav className='navbar h-[10vh] z-10 px-16 fixed bg-white dark:black'>
+		<nav className='navbar h-[10vh] z-10 px-16 fixed bg-[#eee] dark:bg-[#111]'>
 			{/* Desktop Navbar */}
 			<div className='navbar-start hidden lg:flex'>
 				<Link
 					href='/#hero'
-					className='hover:opacity-50'>
+					className='hover:opacity-75'>
 					<Image
-						className='rounded-full bg-white'
-						src='http://via.placeholder.com/360x360'
+						className='rounded-full'
+						src='/LA_Black Transparent Logo.png'
 						alt=''
-						height={40}
-						width={40}
+						height={64}
+						width={64}
 					/>
 				</Link>
 			</div>
 
 			<div className='navbar-center hidden lg:flex w-[95%] justify-evenly'>
-				<ul className='menu menu-horizontal px-1 z-10 bg-inherit'>
+				<ul className='menu menu-horizontal z-10 bg-inherit'>
 					{/* <li tabIndex={0}>
 						<a>
 							Schools
@@ -118,13 +118,13 @@ const Navbar = () => {
 			<div className='lg:hidden navbar-end'>
 				<Link
 					href='/#hero'
-					className='hover:opacity-50'>
+					className='hover:opacity-75'>
 					<Image
 						className='rounded-full'
-						src='http://via.placeholder.com/360x360'
+						src='/LA_Black Transparent Logo.png'
 						alt=''
-						height={40}
-						width={40}
+						height={64}
+						width={64}
 					/>
 				</Link>
 			</div>
