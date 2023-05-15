@@ -4,24 +4,27 @@ import Link from 'next/link';
 const courses = [
 	{
 		image: 'http://via.placeholder.com/640x360',
-		name: 'Course 1',
-		instructor: 'Instructor 1',
-		duration: 'Duration 1',
+		name: 'Learn Premiere Pro: Beginner level',
+		instructor: 'Preethi Ravichandran',
+		duration: '3 months',
 		description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+		enroll: '',
 	},
 	{
 		image: 'http://via.placeholder.com/640x360',
-		name: 'Course 2',
-		instructor: 'Instructor 2',
-		duration: 'Duration 2',
+		name: 'Learn Photoshop: Beginner level',
+		instructor: 'Sushmita Selvadass',
+		duration: '3 months',
 		description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+		enroll: '',
 	},
 	{
 		image: 'http://via.placeholder.com/640x360',
-		name: 'Course 3',
-		instructor: 'Instructor 3',
-		duration: 'Duration 3',
+		name: 'Diploma in Entrepreneurship & Leadership',
+		instructor: 'Prabakar Mariyaraj',
+		duration: '1 year',
 		description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+		enroll: '',
 	},
 ];
 
@@ -29,8 +32,8 @@ const Courses = () => {
 	return (
 		<section
 			id='courses'
-			className='flex flex-col min-h-screen w-full justify-center items-center text-center px-8'>
-			<h1 className='text-3xl mb-8'>Courses</h1>
+			className='flex flex-col min-h-screen w-full justify-center items-center text-center py-16'>
+			<h1 className='text-3xl'>Courses</h1>
 			{/* <div className='flex'>
 				<div className='flex flex-col justify-center items-center p-8 mx-4 rounded-lg backdrop-blur-lg'>
 					<Image
@@ -98,7 +101,11 @@ const Courses = () => {
 							<div className='card-actions justify-between'>
 								<div className='badge badge-outline'>{course.duration}</div>
 								<div className='badge badge-outline'>{course.instructor}</div>
-								<button className='btn btn-primary'>Enroll</button>
+								<Link
+									href={course.enroll}
+									className='btn btn-primary'>
+									Enroll
+								</Link>
 							</div>
 						</div>
 					</div>

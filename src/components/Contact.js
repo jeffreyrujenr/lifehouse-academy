@@ -5,7 +5,7 @@ const Contact = () => {
 	return (
 		<section
 			id='contact'
-			className='footer footer-center p-4 border-t-[1px]'>
+			className='footer footer-center p-4 border-t-[1px] backdrop-blur-xl bg-white/50'>
 			<div className='flex justify-evenly items-center w-full flex-wrap'>
 				{/* Instagram */}
 				<Link

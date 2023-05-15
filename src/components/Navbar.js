@@ -1,3 +1,5 @@
+'use client';
+
 import Image from 'next/image';
 import Link from 'next/link';
 import {
@@ -5,21 +7,28 @@ import {
 	ChevronDownIcon,
 	ChevronRightIcon,
 } from '@heroicons/react/24/solid';
+import { useEffect, useState } from 'react';
 
 const Navbar = () => {
+	const [theme, setTheme] = useState('');
+
+	useEffect(() => {
+		setTheme(window.matchMedia('(prefers-color-scheme: dark)').matches);
+	}, [theme]);
+
 	return (
-		<nav className='navbar h-[10vh] z-10 px-16 fixed bg-[#eee] dark:bg-[#111]'>
+		<nav className='navbar z-10 fixed backdrop-blur-xl border-[1px] rounded-xl'>
 			{/* Desktop Navbar */}
 			<div className='navbar-start hidden lg:flex'>
 				<Link
 					href='/#hero'
 					className='hover:opacity-75'>
 					<Image
-						className='rounded-full'
-						src='/LA_Black Transparent Logo.png'
+						className='rounded-full h-[8vh] w-[8vh] m-2'
+						src='/LA_LOGO.png'
 						alt=''
-						height={64}
-						width={64}
+						height={128}
+						width={128}
 					/>
 				</Link>
 			</div>
@@ -66,13 +75,14 @@ const Navbar = () => {
 						tabIndex={0}
 						className='btn btn-ghost lg:hidden'>
 						<Bars3Icon
-							height={28}
-							width={28}
+							height={128}
+							width={128}
+							className='h-[5vh] w-[5vh]'
 						/>
 					</label>
 					<ul
 						tabIndex={0}
-						className='menu menu-compact dropdown-content mt-3 p-2 shadow bg-[#eee] dark:bg-[#111] rounded-box w-52'>
+						className='menu menu-compact dropdown-content mt-6 p-2 shadow rounded-box w-52'>
 						{/* <li tabIndex={0}>
 							<p>
 								Schools
@@ -107,24 +117,24 @@ const Navbar = () => {
 				</div>
 			</div>
 
-			<div className='lg:hidden navbar-center'>
+			{/* <div className='lg:hidden navbar-center'>
 				<Link
 					href='/#hero'
 					className='hover:opacity-50 text-lg'>
 					LIFEHOUSE ACADEMY
 				</Link>
-			</div>
+			</div> */}
 
 			<div className='lg:hidden navbar-end'>
 				<Link
 					href='/#hero'
 					className='hover:opacity-75'>
 					<Image
-						className='rounded-full'
-						src='/LA_Black Transparent Logo.png'
+						className='rounded-full h-[8vh] w-[8vh] m-2'
+						src='/LA_LOGO.png'
 						alt=''
-						height={64}
-						width={64}
+						height={128}
+						width={128}
 					/>
 				</Link>
 			</div>

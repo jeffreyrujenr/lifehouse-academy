@@ -20,7 +20,7 @@ const Hero = () => {
 						</Link>
 						<Link
 							href='/#contact'
-							className='btn btn-outline'>
+							className='btn btn-outline backdrop-blur-xl'>
 							Contact Us
 						</Link>
 					</div>
