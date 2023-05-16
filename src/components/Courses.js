@@ -3,28 +3,29 @@ import Link from 'next/link';
 
 const courses = [
 	{
-		image: 'http://via.placeholder.com/640x360',
+		image: '/premiere pro.png',
 		name: 'Learn Premiere Pro: Beginner level',
 		instructor: 'Preethi Ravichandran',
 		duration: '3 months',
 		description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-		enroll: '',
+		enroll:
+			'https://docs.google.com/forms/d/e/1FAIpQLSdbtkRC3bNEW7QFW-26G2Op3DkdiHhbfrcWeViphNFT7Zt5Ig/viewform',
 	},
 	{
-		image: 'http://via.placeholder.com/640x360',
+		image: '/photoshop.png',
 		name: 'Learn Photoshop: Beginner level',
 		instructor: 'Sushmita Selvadass',
 		duration: '3 months',
 		description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-		enroll: '',
+		enroll:
+			'https://docs.google.com/forms/d/e/1FAIpQLSenAcZtNmZNF3YEI3Tc4u9EtA2FL6ToV_vFFbBDQSVpUoy0bw/viewform',
 	},
 	{
-		image: 'http://via.placeholder.com/640x360',
+		image: '/entrepreneurship.jpg',
 		name: 'Diploma in Entrepreneurship & Leadership',
 		instructor: 'Prabakar Mariyaraj',
 		duration: '1 year',
 		description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-		enroll: '',
 	},
 ];
 
@@ -89,22 +90,26 @@ const Courses = () => {
 								alt=''
 								height={300}
 								width={400}
-								className=''
+								className='bg-white'
 							/>
 						</figure>
-						<div className='card-body border-x-[1px] border-b-[1px] rounded-2xl rounded-t-none'>
+						<div className='card-body border-x-[1px] border-b-[1px] rounded-2xl rounded-t-none bg-white/50'>
 							<h2 className='card-title'>
 								{course.name}
 								<div className='badge badge-secondary'>NEW</div>
 							</h2>
 							<p>{course.description}</p>
-							<div className='card-actions justify-between'>
-								<div className='badge badge-outline'>{course.duration}</div>
-								<div className='badge badge-outline'>{course.instructor}</div>
+							<div className='card-actions justify-evenly'>
+								<div className='badge badge-success'>{course.duration}</div>
+								<div className='badge badge-accent'>{course.instructor}</div>
 								<Link
-									href={course.enroll}
-									className='btn btn-primary'>
-									Enroll
+									href={course.enroll ? course.enroll : ''}
+									className={`btn ${
+										course.enroll
+											? 'btn-primary'
+											: 'btn-disabled backdrop-blur-xl'
+									}`}>
+									{course.enroll ? 'Register' : 'Coming Soon'}
 								</Link>
 							</div>
 						</div>

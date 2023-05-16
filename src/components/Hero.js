@@ -7,8 +7,8 @@ const Hero = () => {
 			id='hero'>
 			<div className='hero-content text-center'>
 				<div className='max-w-md'>
-					<h1 className='text-4xl font-bold'>LIFEHOUSE ACADEMY</h1>
-					<p className='py-6'>
+					<h1 className='text-5xl font-bold'>LIFEHOUSE ACADEMY</h1>
+					<p className='py-6 text-xl'>
 						Lifehouse Academy exists to equip people with technical skills to
 						face the challenges of the world and make an impact in society.
 					</p>

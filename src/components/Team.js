@@ -7,7 +7,7 @@ const team = [
 		role: 'Video Editing Coach',
 	},
 	{
-		image: 'http://via.placeholder.com/360x360',
+		image: '/Sushmita.jpg',
 		name: 'Sushmitha Selvadass',
 		role: 'Graphic Design Coach',
 	},

@@ -6,13 +6,13 @@ const Contact = () => {
 		<section
 			id='contact'
 			className='footer footer-center p-4 border-t-[1px] backdrop-blur-xl bg-white/50'>
-			<div className='flex justify-evenly items-center w-full flex-wrap'>
+			<div className='flex flex-col lg:flex-row justify-evenly items-center w-full flex-wrap'>
 				{/* Instagram */}
 				<Link
 					href='https://www.instagram.com/'
 					className='flex'>
 					<svg
-						className='h-[3vh] w-[3vh]'
+						className='h-[3vh] w-[3vh] mr-2'
 						xmlns='http://www.w3.org/2000/svg'
 						fill='currentColor'
 						viewBox='0 0 24 24'>
@@ -24,14 +24,14 @@ const Contact = () => {
 				<Link
 					href=''
 					className='flex'>
-					<EnvelopeIcon className='h-[3vh] w-[3vh]' />
+					<EnvelopeIcon className='h-[3vh] w-[3vh] mr-2' />
 					info@lifehouseacademy.org
 				</Link>
 				{/* Mobile */}
 				<Link
 					href=''
 					className='flex'>
-					<PhoneIcon className='h-[3vh] w-[3vh]' />
+					<PhoneIcon className='h-[3vh] w-[3vh] mr-2' />
 					+91-123-456-7890
 				</Link>
 			</div>
