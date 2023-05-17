@@ -1,8 +1,9 @@
-import Image from 'next/image';
 import Hero from '../components/Hero';
 import Team from '../components/Team';
 import Courses from '@/components/Courses';
 import Contact from '@/components/Contact';
+
+import { motion } from 'framer-motion';
 
 export default function Home() {
 	return (
